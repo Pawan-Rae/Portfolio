@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --paper: 42 20% 96%; --ink: 225 20% 13%; --muted: 42 14% 91%; --line: 224 14% 78%; --accent: 162 65% 37%; --code: 162 65% 32%; }
+.dark { --paper: 222 22% 10%; --ink: 42 25% 92%; --muted: 222 17% 16%; --line: 220 14% 25%; --accent: 160 73% 53%; --code: 160 65% 63%; }
+* { border-color: hsl(var(--line)); }
+html { scroll-behavior: smooth; }
+body { min-height: 100vh; background: hsl(var(--paper)); color: hsl(var(--ink)); }
+::selection { background: hsl(var(--accent) / .28); }
+@media (prefers-reduced-motion: reduce) { *, ::before, ::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } }
