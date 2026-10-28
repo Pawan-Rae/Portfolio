@@ -3,7 +3,7 @@ import { Menu, Github, X } from "lucide-react";
 import { useState } from "react";
 import { profile } from "@/data/profile";
 import { ThemeToggle } from "@/components/theme-toggle";
-const links = ["Profile", "Projects", "Skills", "Certifications", "Contact"];
+const links = ["Profile", "About", "Experience", "Projects", "Skills", "Certifications", "Contact"];
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const navLinks = (mobile = false) => links.map((link) => <a key={link} href={`#${link.toLowerCase()}`} onClick={() => setOpen(false)} className={mobile ? "border-b border-line py-4 font-mono text-lg uppercase tracking-wider" : "font-mono text-xs uppercase tracking-wider text-ink/70 transition-colors hover:text-accent"}>{link}</a>);
